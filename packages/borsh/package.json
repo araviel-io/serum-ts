@@ -1,5 +1,5 @@
 {
-  "name": "@project-serum/borsh",
+  "name": "@araviel/borsh",
   "version": "0.2.5",
   "description": "Serum Borsh",
   "main": "dist/lib/index.js",
@@ -18,15 +18,17 @@
     "build": "tsc",
     "docs": "typedoc --out ../../docs/borsh --mode library --composite false --rootDir src src/index.ts src/*.d.ts",
     "test": "",
-    "clean": "rm -rf dist",
+    "clean": "rimraf dist",
     "prepare": "run-s clean build"
   },
   "dependencies": {
+    "@safecoin/web3.js": "^1.29.4",
     "bn.js": "^5.1.2",
-    "buffer-layout": "^1.2.0"
+    "buffer-layout": "^1.2.0",
+    "rimraf": "^3.0.2"
   },
   "peerDependencies": {
-    "@solana/web3.js": "^1.2.0"
+    "@safecoin/web3.js": "^1.29.4"
   },
   "files": [
     "dist"
